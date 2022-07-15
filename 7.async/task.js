@@ -68,32 +68,40 @@ clearAlarms() {
    clock = new AlarmClock();
   //необходимо создавать объект будильник
    console.log(clock);
+   
   // необходимо создавать добавлять звонок
     console.log(clock.addClock("16:45", f => f, 1));
     console.log(clock.alarmCollection.length);
+
   //необходимо добавлять и удалять звонок
     console.log(clock.addClock("16:45", f => f, 1));
     console.log(clock.alarmCollection.length); //(1);
     console.log(clock.removeClock(1));
     console.log(clock.alarmCollection.length); //(0);
- //будильник должен возвращать время в формате HH:MM'/
+ //будильник должен возвращать время в формате HH:MM'
+
    const currentDate = new Date();
-   console.log(clock.getCurrentFormattedTime()); 
+   console.log(clock.getCurrentFormattedTime());
+
   //id интервала должно отсутствовать до запуска'//
    console.log(clock.timerId);
+
   //необходимо запускать будильник
     console.log(clock.addClock("16:45", f => f, 1));
     console.log(clock.start());
     console.log(clock.timerId);
+
    // console.log(clock.removeClock(1));
     console.log(clock.alarmCollection.length);
     console.log(clock.start());
     console.log(clock.timerId);
+
   //будильник должен создавать таймер, а затем его удалять
     console.log(clock.start());
     console.log(clock.timerId);
     console.log(clock.stop());
     console.log(clock.timerId);
+
   //Будильник должен создавать звонки, а затем очищать их все
     console.log(clock.addClock("16:45", f => f, 1));
     console.log(clock.addClock("16:45", f => f, 2));
