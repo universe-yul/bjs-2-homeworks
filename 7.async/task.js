@@ -29,8 +29,11 @@ removeClock(id) {
 	}
 	
 getCurrentFormattedTime() {
-	let date = new Date();
-	return (`${date.getHours()}:${date.getMinutes()}`);
+	    let now = new Date();
+        const hours = now.getHours() < 10 ? `0${now.getHours()}` : `${now.getHours()}`;
+        const minutes = now.getMinutes() < 10 ? `0${now.getMinutes()}` : `${now.getMinutes()}`;
+        let nowTime = `${hours}:${minutes}`;
+        return nowTime;
 }
 
 start () {
